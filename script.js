@@ -1,5 +1,7 @@
 /**
- 2020-12-24 - First commit
+ Dec 2020 - Joao Rodrigues
+ https://github.com/jrrio/mousefollow
+ MIT License
 */
 
 const circle = document.querySelector(".circle"),
