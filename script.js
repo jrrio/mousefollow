@@ -1,5 +1,5 @@
 /**
- My Github repo: https://github.com/jrrio/mousefollow
+ 2020-12-24 - First commit
 */
 
 const circle = document.querySelector(".circle"),
@@ -48,19 +48,19 @@ let isScrolling = false;
 
 function onScroll() {
   if (!isScrolling) {
-		requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
       isScrolling = false;
       hideCircle();
     });
-	}
-	isScrolling = true;
+  }
+  isScrolling = true;
 }
 
 let isResizing = false;
 
 function onResize() {
   if (!isResizing) {
-		requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
       isResizing = false;
       hideCircle();
       oCircle.x = oCircle.y = oCircle.r;
@@ -69,8 +69,8 @@ function onResize() {
       circle.style.setProperty("--translateX", 0);
       circle.style.setProperty("--translateY", 0);
     });
-	}
-	isResizing = true;
+  }
+  isResizing = true;
 }
 
 document.addEventListener("DOMContentLoaded", init);
