@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // init()
     {
-      const { x, y, width } = cursor.getBoundingClientRect();
-      let cursorRadius = width / 2;
-      oCursor.offsetX = x + cursorRadius;
-      oCursor.offsetY = y + cursorRadius;
+      const { x, y, width } = cursor.getBoundingClientRect(),
+        radius = width / 2;
+      oCursor.offsetX = x + radius;
+      oCursor.offsetY = y + radius;
       cursor.style.opacity = 0;
       cursor.style.setProperty('--scale', 0);
     }
