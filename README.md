@@ -1,9 +1,10 @@
 # Following the mouse pointer with a circle  
 
 The JavaScript code will set 3 CSS custom properties used in the cursor's transform property, making it scale and follow the mouse pointer's movement.
-It's possible to use an SVG circle but it's overkill (more HTML and CSS to be added). Also as the circle radius is constant, SVG wouldn't make a difference anyway.
 
-Debouncing resize and scroll events idea from:  
+The cursor is a DIV styled as a circle with "position: fixed", so that it is removed from the normal document flow and its coordinates (x, y) are always relative to the viewport. This makes everything easy to deal with in JavaScript and CSS. It's possible to use an SVG circle though, but more HTML and CSS would be required. Also as the circle radius is constant, SVG wouldn't make a difference anyway.
+
+Debouncing scroll event idea from:  
 https://www.html5rocks.com/en/tutorials/speed/animations/#debouncing-scroll-events
 
 I've used vanilla JavaScript and CSS Flexbox which will run in major browsers as of mid-2017. An example was published on Codepen:  
