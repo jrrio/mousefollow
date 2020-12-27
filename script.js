@@ -37,19 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
 
-    /* Set the scale of the cursor while hovering over
-       A, BUTTON or IMG elements.
-       onMouseOver() is optional, so remove it if you don't like it.
-     */
-    let onMouseOver = function (e) {
-      const re = /^(a|button|img)$/i;
-      let scale = 1;
-      if (re.test(e.target.tagName)) scale = 1.8;
-      requestAnimationFrame(() => {
-        cursor.style.setProperty("--scale", scale);
-      });
-    };
-
     // Hide the cursor while scrolling.
     let isScrolling = false;
 
@@ -67,8 +54,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add event listeners.
     document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseover", onMouseOver);
     window.addEventListener("scroll", onScroll);
+
+    /****************************************************************
+      IMPORTANT: This part is an optional feature which can be
+      disabled by setting "changeScale" to false.
+
+      The code below will set the scale of the cursor while
+      hovering over A, BUTTON or IMG elements. You may specify
+      another group of CSS selectors depending on your needs.
+     ***************************************************************/
+    const changeScale = true;
+
+    let onMouseEnter = function () {
+      requestAnimationFrame(() => {
+        cursor.style.setProperty("--scale", 1.8);
+      });
+    };
+
+    let onMouseLeave = function () {
+      requestAnimationFrame(() => {
+        cursor.style.setProperty("--scale", 1);
+      });
+    };
+
+    if (changeScale) {
+      const tags = document.querySelectorAll('a, button, img');
+      tags.forEach(tag => {
+        tag.addEventListener('mouseenter', onMouseEnter);
+        tag.addEventListener('mouseleave', onMouseLeave);
+      });
+    }
+
   }
 
 });
