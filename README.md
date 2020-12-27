@@ -7,7 +7,7 @@ The cursor is a DIV styled as a circle with "position: fixed", so that it is rem
 Debouncing scroll event idea from:  
 https://www.html5rocks.com/en/tutorials/speed/animations/#debouncing-scroll-events
 
-I've used vanilla JavaScript (ES6) and CSS Flexbox which will run in all major browsers as of mid-2017. An example was published on Codepen:  
+I've used vanilla JavaScript (ES6) and CSS which will run in all major browsers as of mid-2017. An example was published on Codepen:  
 [https://codepen.io/jrio/pen/oNzoGwV](https://codepen.io/jrio/pen/oNzoGwV)
 
 ## Other solutions
