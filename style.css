@@ -7,7 +7,10 @@
   display: none;
 }
 
-/* The pointer CSS media feature tests whether the user has an accurate pointing device (such as a mouse, a stylus pen on touch screen, etc.). It's also possible to use "any-pointer: fine" for touch devices having a mouse connected. */
+/* The pointer CSS media feature tests whether the user has an accurate pointing device
+   (such as a mouse, a stylus pen on touch screen, etc.). It's also possible to use
+   "any-pointer: fine" for touch devices having a mouse connected.
+*/
 @media screen and (pointer: fine) {
   .cursor {
     background: #ce6f22;
