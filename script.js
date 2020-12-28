@@ -38,18 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Hide the cursor while scrolling.
-    let isScrolling = false;
+    let ticking = false;
 
     let onScroll = function () {
-      if (!isScrolling) {
+      if (!ticking) {
         requestAnimationFrame(() => {
-          isScrolling = false;
           isVisible = false;
           cursor.style.opacity = 0;
           cursor.style.setProperty("--scale", 0);
+          ticking = false; // allow further rAFs to be called
         });
+        ticking = true;
       }
-      isScrolling = true;
     };
 
     // Add event listeners.
