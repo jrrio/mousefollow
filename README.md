@@ -9,7 +9,7 @@ The cursor is simply a DIV element styled as a circle with "position: fixed", so
 The idea of debouncing the scroll event came from:  
 https://www.html5rocks.com/en/tutorials/speed/animations/
 
-I've used vanilla JavaScript (ES6) and CSS which will run in all major browsers as of mid-2017.
+I've used vanilla JavaScript (ES6) and CSS custom properties which will run in all major browsers as of mid-2017.
 
 ## Example  
 An example was published on Codepen:  
