@@ -1,6 +1,6 @@
 # Following the mouse pointer with a circle  
 
-I have seen this "mouse-follow" effect on the Internet, sometimes using a library, and thought of building a code from scratch with just vanilla JavaScript (ES6) and CSS custom properties (aka CSS variables) instead of the traditional drawing function inside a requestAnimationFrame() loop usually setting the top / left properties or the transform property directly.
+I have seen this "mouse follow" effect on the Internet and thought of building a code from scratch with just vanilla JavaScript (ES6) and CSS custom properties (aka CSS variables), instead of the traditional function inside a requestAnimationFrame() loop usually setting either the top / left properties or the transform property directly.
 
 JavaScript will track the mouse coordinates (x, y) and set 3 CSS custom properties used in the cursor's transform property, making it follow the mouse pointer movement and change its scale when hovering over links, images or buttons. The latter is an optional feature, which can be disabled or modified.
 
