@@ -16,7 +16,7 @@ An example was published on Codepen:
 [https://codepen.io/jrio/pen/oNzoGwV](https://codepen.io/jrio/pen/oNzoGwV)
 
 ## Other solutions  
-- Another approach would be setting top and left attributes (I think transform with translate(x,y) is more performant). 
+- Another approach would be setting top and left attributes. Note: I think transform with translate(x, y) has a slightly better performance. 
   https://getbutterfly.com/how-and-why-i-added-a-circle-following-my-mouse-pointer/
 
 - Another solution using canvas:  
