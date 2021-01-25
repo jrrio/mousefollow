@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // init()
     {
-      const { x, y, width } = cursor.getBoundingClientRect(),
-        radius = width / 2;
+      const { x, y, width, radius = width / 2 } = cursor.getBoundingClientRect();
       oCursor.offsetX = x + radius;
       oCursor.offsetY = y + radius;
       cursor.style.opacity = 0;
