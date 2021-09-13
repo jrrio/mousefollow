@@ -7,10 +7,7 @@
   display: none;
 }
 
-/* The pointer CSS media feature tests whether the user has an accurate pointing device
-   (such as a mouse, a stylus pen on touch screen, etc.). It's also possible to use
-   "any-pointer: fine" for touch devices having a mouse connected.
-*/
+/* The pointer CSS media feature tests whether the user has an accurate pointing device (such as a mouse, a stylus pen on touch screen, etc.). It's also possible to use "any-pointer: fine" for touch devices having a mouse connected. */
 @media screen and (pointer: fine) {
   .cursor {
     background: #ce6f22;
@@ -37,15 +34,18 @@
 } */
 
 :root {
-  --clr-primary: snow;
-  --clr-secondary: #0a1124;
-  --clr-tertiary: #289817;
+  --clr-1: snow;
+  --clr-2: #0a1124;
+  --clr-3: #289817;
+  --tan-3deg: 0.052408; /* tangent of 3deg */
+  --skewed-padding: calc(100% * var(--tan-3deg));
+  /* height = width * tan(angle) */
 }
 
 body {
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-2);
   box-sizing: border-box;
-  color: var(--clr-primary);
+  color: var(--clr-1);
   font: 300 1.1rem/1.65 'Karla', sans-serif;
   margin: 0;
   padding: 0;
@@ -75,19 +75,17 @@ img {
 }
 
 section {
-  /* min-height: 50%; */
-  padding: 10px 1rem;
+   /* Because sections are skewed by 3deg, we should add the increased height var(--skewed-padding) to padding-top and bottom */
+  padding: var(--skewed-padding) 1rem;
 }
 
 .section__one {
-  /* Because section__two::before is skewed by 9deg,
-     we should add its height to padding-bottom => h = width * tan(3deg) */
-  padding-bottom: calc(10px + (100% * 0.0524));
+  padding-top: 20px;
 }
 
 .section__two {
-  background: var(--clr-primary); /* #ebebeb; */
-  color: var(--clr-secondary);
+  background: var(--clr-1); /* #ebebeb; */
+  color: var(--clr-2);
   position: relative;
   z-index: 1;
 }
@@ -138,7 +136,7 @@ section {
 }
 
 .card__text button {
-  background-color: var(--clr-tertiary);
+  background-color: var(--clr-3);
   border-radius: .5rem;
   border-color: transparent;
   font-weight: 700;
@@ -168,7 +166,7 @@ section {
 }
 
 .card__img img:hover {
-  transform: scale(1.1) translate(5px, -5px);
+  transform: scale(1.03) translate(5px, -5px);
 }
 
 @media screen and (min-width: 768px) {
